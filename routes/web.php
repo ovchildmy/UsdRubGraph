@@ -15,4 +15,4 @@ use App\Http\Controllers\DataProcessing;
 */
 
 Route::get('/', [DataProcessing::class, 'index']);
-Route::get('/update_date', [DataProcessing::class, 'ajax_get_data'])->name('update_date');
+Route::get('/update_date', [DataProcessing::class, 'ajax_get_data'])->name('update_date');  // ajax-запрос на подгрузку данных
