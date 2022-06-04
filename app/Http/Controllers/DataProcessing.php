@@ -18,7 +18,7 @@ class DataProcessing extends Controller
         ));
     }
 
-    // Ajax-подгрузка данных
+    // Ajax-подгрузка данных при выборе временного промежутка
     public function ajax_get_data(Request $request)
     {
         $days_diff = $request['days']; // Диапазон дней, выбирается пользователем

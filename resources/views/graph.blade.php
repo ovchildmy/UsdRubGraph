@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -13,11 +13,11 @@
 </head>
 
 <body>
-  <div class="find_block">
+  <div class="find_block container">
     <span role="button" title="За какое количество дней вы хотите увидеть курс">Диапазон дней (?)</span>
-    <div>
-      <input id="days_input" type="number" min="1" value="5" required>
-      <button id="update_date_btn-js">Просмотр</button>
+    <div class="input-group">
+      <input id="days_input" class="form-control" type="number" min="1" value="5" required>
+      <button id="update_date_btn-js" class="btn btn-outline-primary">Просмотр</button>
     </div>
   </div>
   <div id="container" style="width:100%; height:400px;"></div>
@@ -50,6 +50,7 @@
       const chart = Highcharts.chart('container', chart_options); // Построение графика
 
 
+      // Обновление данных и графика
       $("#update_date_btn-js").on("click", function() {
         let days = $("#days_input").val();
 
@@ -81,7 +82,6 @@
               });
             }
           })
-          console.log('{{ route("update_date") }}');
         }
       })
     });
